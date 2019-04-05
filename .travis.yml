@@ -15,10 +15,10 @@ after_success:
   - docker build -t bartbruneel/multi-worker ./worker
 
 #Log in to the docker CLI
-- - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 #Take the images and push to dockerhub
- - docker push bartbruneel/multi-client
- - docker push bartbruneel/multi-nginx
- - docker push bartbruneel/multi-server
- - docker push bartbruneel/multi-worker
+  - docker push bartbruneel/multi-client
+  - docker push bartbruneel/multi-nginx
+  - docker push bartbruneel/multi-server
+  - docker push bartbruneel/multi-worker
